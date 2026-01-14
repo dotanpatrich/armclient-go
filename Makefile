@@ -1,10 +1,13 @@
-all: test build-linux build-darwin build-windows
+all: test build-linux build-darwin build-darwin-arm64 build-windows
 
 build-linux:
 	GOARCH=amd64 GOOS=linux go build -o bin/linux/amd64/armclient .
 
 build-darwin:
 	GOARCH=amd64 GOOS=darwin go build -o bin/darwin/amd64/armclient .
+
+build-darwin-arm64:
+	GOARCH=arm64 GOOS=darwin go build -o bin/darwin/arm64/armclient .
 
 build-windows:
 	GOARCH=amd64 GOOS=windows go build -o bin/windows/amd64/armclient.exe .
