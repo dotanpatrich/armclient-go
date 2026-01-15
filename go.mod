@@ -1,6 +1,6 @@
 module github.com/yangl900/armclient-go
 
-go 1.18
+go 1.25
 
 require (
 	github.com/Azure/go-autorest v10.1.0+incompatible
